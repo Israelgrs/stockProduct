@@ -12,13 +12,13 @@ public class Program {
 		Locale.setDefault(Locale.US);
 		Scanner sc = new Scanner(System.in);
 
-		Product product = new Product();
 		System.out.println("Enter product data: ");
 		System.out.print("Name: ");
-		product.name = sc.nextLine();
+		String name = sc.nextLine();
 		System.out.print("price: ");
-		product.price = sc.nextDouble();
+		double price = sc.nextDouble();
 		System.out.print("Quantity in stock: ");
+		Product product = new Product(name, price);
 		product.quantity = sc.nextInt();
 		
 		System.out.println();
